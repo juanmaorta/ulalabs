@@ -1,9 +1,11 @@
+import OrderHelper from '../helpers/OrderHelper';
+
 import dataFixture from '../fixtures/dataFixture.json';
 
 class DataService {
 
     fetchOrders() {
-        return dataFixture;
+        return OrderHelper.coordsFromOrderList(dataFixture);
     }
 }
 
