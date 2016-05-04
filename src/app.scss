@@ -1,0 +1,35 @@
+.widget {
+  width: 50%;
+  margin: 2em;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.border--bottom {
+  border-bottom: solid 1px #999;
+}
+
+.full--length {
+  width: 100%;
+  clear: both;
+
+  button {
+    width: 100%;
+  }
+}
+
+.text--left {
+  float: left;
+}
+
+.text--right {
+  float: right;
+}
+
+h3 {
+  color: #212121;
+}
+
+md-list-item {
+  color: #999;
+}
