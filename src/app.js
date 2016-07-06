@@ -9,7 +9,7 @@ import DataService from 'services/DataService';
 
 import style from './app.scss';
 
-let myApp = angular.module('myApp', ['ngMaterial','gridster', 'nvd3'])
+let myApp = angular.module('myApp', ['ngMaterial', 'gridster', 'nvd3'])
     .service('DataService', DataService)
     .controller('myCtrl', ($scope, DataService) => {
         $scope.options = {
@@ -26,13 +26,17 @@ let myApp = angular.module('myApp', ['ngMaterial','gridster', 'nvd3'])
                 duration: 500,
                 stacked: true,
                 showControls: false,
-                x: function(d){ return d.x; },
-                y: function(d){ return d.y; },
+                x: function(d) {
+                    return d.x;
+                },
+                y: function(d) {
+                    return d.y;
+                },
                 xAxis: {
                     //axisLabel: 'Pedido',
                     showMaxMin: true,
                     staggerLabels: true,
-                    tickFormat: function(d){
+                    tickFormat: function(d) {
                         //return d3.time.format('%x')(new Date(d))
                         return d;
                     }
@@ -40,15 +44,17 @@ let myApp = angular.module('myApp', ['ngMaterial','gridster', 'nvd3'])
                 tooltip: {
                     contentGenerator: (e) => {
                         let series = e.series[0];
-                        if (series.value === null) return;
+                        if (series.value === null) {
+                            return;
+                        }
 
-                        return "<div>Este día ahorraste "+ series.value +"</div>";
+                        return `<div>Este día ahorraste ${series.value}</div>`;
                     }
                 },
                 yAxis: {
                     //axisLabel: 'Importe (euros)',
                     axisLabelDistance: -20,
-                    tickFormat: function (d) {
+                    tickFormat: function(d) {
                         return d3.format(',.2f')(d) + '€';
                     }
                 }

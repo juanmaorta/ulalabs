@@ -49,7 +49,7 @@ module.exports = {
     devServer: {
         port: 9090,
         hot: true,
-        contentBase: 'public/',
+        contentBase: 'src/',
         stats: { colors: true },
         historyApiFallback: true,
     },
