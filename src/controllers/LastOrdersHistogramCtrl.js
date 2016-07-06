@@ -1,6 +1,8 @@
-class MainCtrl {
-    constructor($scope, DataService) {
-        $scope.options = {
+class LastOrdersHistogramCtrl {
+    constructor(DataService) {
+        this.orders = DataService.fetchOrders().data;
+
+        this.options = {
             chart: {
                 type: 'multiBarChart',
                 height: 450,
@@ -48,13 +50,7 @@ class MainCtrl {
                 }
             }
         };
-
-        $scope.orders = DataService.fetchOrders().data;
-
-        $scope.showOrder = () => {
-            console.log('xxx');
-        }
-    }
+    };
 }
 
-export default MainCtrl;
+export default LastOrdersHistogramCtrl;

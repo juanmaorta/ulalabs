@@ -8,7 +8,7 @@ import ngAria from 'angular-aria';
 import ngAnimate from 'angular-animate';
 
 import services from './config/services';
-import controllers from './config/controllers';
+import components from './config/components';
 
 import style from './app.scss';
 
@@ -20,4 +20,4 @@ let myApp = angular.module('myApp', [
 
 // Declarations
 services.forEach(service => myApp.service(service.name, service.service));
-controllers.forEach(controller => myApp.controller(controller.name, controller.controller));
+components.forEach(component => myApp.component(component.name, component.component));

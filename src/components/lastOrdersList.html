@@ -1,0 +1,8 @@
+<div md-content ng-cloack>
+    <h3>{{ $ctrl.title }}</h3>
+    <md-list>
+        <md-list-item ng-repeat="order in $ctrl.orders[0].values" ng-click="$ctrl.showOrder(order.id)" class="border--bottom full--length">
+            <div class="text--left">{{ order.x }}</div><div class="text--right"><strong>{{ order.y }}€</strong></div>
+        </md-list-item>
+    </md-list>
+</div>

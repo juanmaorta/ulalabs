@@ -11,18 +11,10 @@
 <body>
 
 <div ng-app="myApp">
-    <div ng-controller="MainCtrl">
+    <div>
         <div class="widget">
-            <nvd3 options="options" data="orders"></nvd3>
-
-            <div md-content ng-cloack>
-                <h3>Listado de tus compras</h3>
-                <md-list>
-                    <md-list-item ng-repeat="order in orders[0].values" ng-click="showOrder()" class="border--bottom full--length">
-                        <div class="text--left">{{ order.x }}</div><div class="text--right"><strong>{{ order.y }}€</strong></div>
-                    </md-list-item>
-                </md-list>
-            </divmd-content>
+            <last-orders-histogram></last-orders-histogram>
+            <last-orders-list title="'Listado de tus compras'"></last-orders-list>
         </div>
     </div>
 </div>
