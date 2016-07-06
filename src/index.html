@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Testing D3</title>
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css">
+</head>
+<body>
+
+<div ng-app="myApp">
+    <div ng-controller="myCtrl">
+        <div class="widget">
+            <nvd3 options="options" data="orders"></nvd3>
+
+            <div md-content ng-cloack>
+                <h3>Listado de tus compras</h3>
+                <md-list>
+                    <md-list-item ng-repeat="order in orders[0].values" ng-click="showOrder()" class="border--bottom full--length">
+                        <div class="text--left">{{ order.x }}</div><div class="text--right"><strong>{{ order.y }}€</strong></div>
+                    </md-list-item>
+                </md-list>
+            </divmd-content>
+        </div>
+    </div>
+</div>
+
+<script src="js/bundle.js"></script>
+</body>
+</html>
