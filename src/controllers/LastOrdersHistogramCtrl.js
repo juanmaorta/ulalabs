@@ -1,6 +1,6 @@
 class LastOrdersHistogramCtrl {
     constructor(DataService) {
-        this.orders = DataService.fetchOrders().data;
+        this.orders = DataService.fetchOrders(this.customerId).data;
 
         this.options = {
             chart: {

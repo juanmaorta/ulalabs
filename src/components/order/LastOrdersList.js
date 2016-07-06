@@ -1,11 +1,12 @@
 import template from './lastOrdersList.html';
-import controller from '../controllers/LastOrdersListCtrl';
+import controller from '../../controllers/LastOrdersListCtrl';
 
 let LastOrdersList= {
     template: template,
     controller: controller,
     bindings: {
-        title: '=',
+        title: '<',
+        customerId: '<',
     }
 };
 

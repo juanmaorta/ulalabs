@@ -1,0 +1,47 @@
+{
+  "name": "Julio",
+  "orderCount": 44,
+  "last5": [
+    {
+      "id": 349652,
+      "total": 48,
+      "withoutDiscounts": 36.59,
+      "discounts": 11.41,
+      "date": "05/07/2016",
+      "dateWithSlot": "05/07/2016 de 8 a 10h"
+    },
+    {
+      "id": 347415,
+      "total": 57.15,
+      "withoutDiscounts": 44.5,
+      "discounts": 12.65,
+      "date": "28/06/2016",
+      "dateWithSlot": "28/06/2016 de 7 a 9h"
+    },
+    {
+      "id": 344893,
+      "total": 52.52,
+      "withoutDiscounts": 43.25,
+      "discounts": 9.27,
+      "date": "15/06/2016",
+      "dateWithSlot": "15/06/2016 de 7 a 9h"
+    },
+    {
+      "id": 343574,
+      "total": 50,
+      "withoutDiscounts": 38.23,
+      "discounts": 11.77,
+      "date": "09/06/2016",
+      "dateWithSlot": "09/06/2016 de 7 a 9h"
+    },
+    {
+      "id": 341278,
+      "total": 51,
+      "withoutDiscounts": 40.39,
+      "discounts": 10.61,
+      "date": "01/06/2016",
+      "dateWithSlot": "01/06/2016 de 9 a 11h"
+    }
+  ],
+  "totalAverage": 51.73
+}

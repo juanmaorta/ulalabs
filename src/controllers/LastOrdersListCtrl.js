@@ -1,11 +1,12 @@
 class LastOrdersListCtrl {
-    constructor(DataService) {
-        this.orders = DataService.fetchOrders().data;
-
+    constructor($rootScope, DataService) {
+        this.$rootScope = $rootScope;
+        this.orders = DataService.fetchOrders(this.customerId).data;
     }
 
     showOrder(id) {
-        console.log(id);
+        this.$rootScope.$broadcast('displayOrderClicked', id);
+
     }
 };
 
